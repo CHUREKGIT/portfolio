@@ -13,10 +13,9 @@ class Blog(models.Model):
     body = models.TextField()
     image = models.ImageField(upload_to='images/')
 
-# add blog app to seeting
+    def __str__(self):
+        return self.title
 
-#create migration
+    def summary(self):
+        return self.body[:100] + "..."
 
-#migrate 
-
-#add to the admin
